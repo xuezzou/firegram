@@ -3,13 +3,13 @@ import 'firebase/storage';
 import 'firebase/firestore';
 
 var firebaseConfig = {
-  apiKey: "AIzaSyDLmnoBvnjOQ-AaJgDw1DnVBiTETbcp8LI",
-  authDomain: "the-net-ninja-sandbox.firebaseapp.com",
-  databaseURL: "https://the-net-ninja-sandbox.firebaseio.com",
-  projectId: "the-net-ninja-sandbox",
-  storageBucket: "the-net-ninja-sandbox.appspot.com",
-  messagingSenderId: "485942827092",
-  appId: "1:485942827092:web:1811d9d8f1f5fabcd5b5c1"
+  apiKey: "AIzaSyBeMzMV9u2-2hzIthXWwUDtk8ZB2IRyzW4",
+  authDomain: "tom-photo.firebaseapp.com",
+  projectId: "tom-photo",
+  storageBucket: "tom-photo.appspot.com",
+  messagingSenderId: "401538209373",
+  appId: "1:401538209373:web:9617df6713a631490a9fb4",
+  measurementId: "G-FYDXK1RBEL"
 };
 
 // Initialize Firebase

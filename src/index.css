@@ -1,18 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 
 :root{
-  --primary: #efb6b2;
-  --secondary: #4e4e4e;
-  --error: #ff4a4a;
+  --primary: #ffffff;/*#efb6b2*/
+  --secondary: #ffea61; /*#4e4e4e*/
+  --error: #eec643;
 }
 
 /* base styles & title */
 body{
-  font-family: "Noto Serif";
+  font-family: 'Raleway', sans-serif;
   color: var(--secondary);
+  background: #040f0f;
+  margin: 0; 
+  /* uncomment margin for a margin around the site */
 }
 .App{
-  max-width: 960px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 .title h1{
@@ -20,7 +24,10 @@ body{
   font-size: 1.2rem;
   letter-spacing: 2px;
   font-weight: normal;
+
+  margin: 12px 9px;
 }
+/* not using title h2 */
 .title h2, .title p{
   text-align: center;
 }
@@ -53,7 +60,7 @@ label{
 }
 label:hover{
   background: var(--primary);
-  color: white;
+  color: var(--secondary);
 }
 .output{
   height: 60px;
@@ -70,28 +77,29 @@ label:hover{
   margin-top: 20px;
 }
 
-/* image grid styles */
+/* original image grid (square images) styles */
 .img-grid{
-  margin: 20px auto;
+  /* margin: 20px auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
+  grid-gap: 40px; */
 }
 .img-wrap{
-  overflow: hidden;
+  /* overflow: hidden;
   height: 0;
-  padding: 50% 0;
+  padding: 50% 0; */
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
-  opacity: 0.8;
+  opacity: 0.83;
 }
 .img-wrap img{
-  min-width: 100%;
+  /* min-width: 100%;
   min-height: 100%;
   max-width: 150%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0; */
+  width: 100%;
 }
 
 /* modal styles */
@@ -105,9 +113,103 @@ label:hover{
 }
 .backdrop img{
   display: block;
-  max-width: 60%;
-  max-height: 80%;
+  max-width: 70%;
+  max-height: 87%;
   margin: 60px auto;
   box-shadow: 3px 5px 7px rgba(0,0,0,0.5);
   border: 3px solid white;
+}
+
+/* footer style */
+.footer p{
+  text-align: center;
+  color: var(--primary);
+  font-size: 0.8rem;
+}
+.footer {
+  min-height: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 60px 0 5px 0;
+}
+.footer p a{
+  text-decoration: none;
+  color: var(--secondary);
+  font-style: italic;
+  margin: 8px;
+}
+.socials svg {
+  width: 24px;
+  height: 24px;
+  border-radius: 14%;
+  transition: transform 0.1s ease-in-out;
+  overflow: hidden;
+}
+.socials a {
+  text-decoration: none;
+  border-radius: 25%;
+  color: var(--primary);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 6px;
+  width: 30px;
+  height: 30px;
+}
+#instagram-container:hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.1);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  color: var(--primary);;
+}
+
+/* image grid reponsive design */
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 0px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 0px;
+}
+
+.column img {
+  margin-top: 0px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
 }
