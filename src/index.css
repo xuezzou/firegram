@@ -90,7 +90,7 @@ label:hover{
   padding: 50% 0; */
   /* padding controls height, will always be perfectly square regardless of width */
   position: relative;
-  opacity: 0.83;
+  opacity: 0.8;
 }
 .img-wrap img{
   /* min-width: 100%;
@@ -203,6 +203,9 @@ label:hover{
     flex: 50%;
     max-width: 50%;
   }
+  .img-wrap{
+    opacity: 0.8;
+  }
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -211,5 +214,8 @@ label:hover{
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
+  }
+  .img-wrap{
+    opacity: 1;
   }
 }
